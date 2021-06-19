@@ -1,0 +1,199 @@
+{
+  "update": [
+    "servers.dat"
+  ],
+  "updateExclusions": [],
+  "updateShared": [],
+  "updateVerify": [
+    "libraries",
+    "natives",
+    "minecraft.jar"
+  ],
+  "updateOptional": [
+    {
+      "permissions": 0,
+      "type": "JVMARGS",
+      "actions": [
+        {
+          "args": [
+            "--add-modules",
+            "jdk.unsupported"
+          ],
+          "type": "jvmArgs"
+        }
+      ],
+      "mark": false,
+      "visible": false,
+      "name": "Java9Args",
+      "info": "Аргументы для запуска на Java 9+",
+      "triggers": [
+        {
+          "type": "JAVA_VERSION",
+          "need": true,
+          "value": 8,
+          "compareMode": 1
+        }
+      ],
+      "subTreeLevel": 1,
+      "isPreset": false
+    },
+    {
+      "permissions": 0,
+      "type": "JVMARGS",
+      "actions": [
+        {
+          "args": [
+            "-XstartOnFirstThread"
+          ],
+          "type": "jvmArgs"
+        }
+      ],
+      "mark": false,
+      "visible": false,
+      "name": "MacOSArgs",
+      "info": "MacOS флаги",
+      "triggers": [
+        {
+          "type": "OS_TYPE",
+          "need": true,
+          "value": 2,
+          "compareMode": 0
+        }
+      ],
+      "subTreeLevel": 1,
+      "isPreset": false
+    },
+    {
+      "permissions": 0,
+      "type": "FILE",
+      "actions": [
+        {
+          "files": {
+            "libraries/org/lwjgl/lwjgl-glfw/3.2.2/lwjgl-glfw-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl-opengl/3.2.2/lwjgl-opengl-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl/3.2.2/lwjgl-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl-jemalloc/3.2.2/lwjgl-jemalloc-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl-stb/3.2.2/lwjgl-stb-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl-openal/3.2.2/lwjgl-openal-3.2.2.jar": "",
+            "libraries/org/lwjgl/lwjgl-tinyfd/3.2.2/lwjgl-tinyfd-3.2.2.jar": ""
+          },
+          "type": "file"
+        }
+      ],
+      "mark": true,
+      "visible": false,
+      "name": "NonMacLwjgl",
+      "info": "Lwjgl 3.2.2",
+      "subTreeLevel": 1,
+      "isPreset": false
+    },
+    {
+      "permissions": 0,
+      "type": "FILE",
+      "actions": [
+        {
+          "files": {
+            "libraries/org/lwjgl/lwjgl-stb/3.2.1/lwjgl-stb-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl-opengl/3.2.1/lwjgl-opengl-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl/3.2.1/lwjgl-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl-openal/3.2.1/lwjgl-openal-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl-jemalloc/3.2.1/lwjgl-jemalloc-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl-tinyfd/3.2.1/lwjgl-tinyfd-3.2.1.jar": "",
+            "libraries/org/lwjgl/lwjgl-glfw/3.2.1/lwjgl-glfw-3.2.1.jar": ""
+          },
+          "type": "file"
+        }
+      ],
+      "mark": false,
+      "visible": false,
+      "name": "MacLwjgl",
+      "info": "Lwjgl 3.2.1",
+      "triggers": [
+        {
+          "type": "OS_TYPE",
+          "need": true,
+          "value": 2,
+          "compareMode": 0
+        }
+      ],
+      "conflictFile": [
+        {
+          "name": "NonMacLwjgl",
+          "type": "FILE"
+        }
+      ],
+      "subTreeLevel": 1,
+      "isPreset": false
+    },
+    {
+      "permissions": 0,
+      "type": "JVMARGS",
+      "actions": [
+        {
+          "args": [
+            "-XX:+CMSIncrementalMode",
+            "-XX:+UseConcMarkSweepGC"
+          ],
+          "type": "jvmArgs"
+        }
+      ],
+      "mark": false,
+      "visible": false,
+      "name": "Java8Args",
+      "info": "Аргументы для запуска на Java 8",
+      "triggers": [
+        {
+          "type": "JAVA_VERSION",
+          "need": true,
+          "value": 8,
+          "compareMode": 0
+        }
+      ],
+      "subTreeLevel": 1,
+      "isPreset": false
+    }
+  ],
+  "jvmArgs": [
+    "-Dfml.ignorePatchDiscrepancies\u003dtrue",
+    "-Dfml.ignoreInvalidMinecraftCertificates\u003dtrue",
+    "-XX:-UseAdaptiveSizePolicy",
+    "-Xmn128M",
+    "-Djava.library.path\u003dnatives",
+    "-XX:+DisableAttachMechanism"
+  ],
+  "classPath": [
+    "minecraft.jar",
+    "libraries"
+  ],
+  "altClassPath": [],
+  "clientArgs": [],
+  "securityManagerConfig": "CLIENT",
+  "classLoaderConfig": "LAUNCHER",
+  "signedClientConfig": "NONE",
+  "version": "1.16.4",
+  "assetIndex": "1.16.4",
+  "dir": "client1.16.4",
+  "assetDir": "asset1.16.4",
+  "recommendJavaVersion": 8,
+  "minJavaVersion": 8,
+  "maxJavaVersion": 17,
+  "warnMissJavaVersion": true,
+  "sortIndex": 0,
+  "uuid": "9fd81d01-bded-439e-b22a-1500518026a5",
+  "title": "client1.16.4",
+  "info": "Информация о сервере",
+  "serverAddress": "localhost",
+  "serverPort": 25565,
+  "updateFastCheck": true,
+  "mainClass": "net.minecraft.client.main.Main",
+  "compatClasses": [],
+  "properties": {},
+  "servers": [
+    {
+      "name": "client1.16.4",
+      "serverAddress": "localhost",
+      "serverPort": 25565,
+      "isDefault": true
+    }
+  ]
+}

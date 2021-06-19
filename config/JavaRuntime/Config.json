@@ -1,0 +1,9 @@
+{
+  "createAccountURL": "https://onion.pp.ua/wp-login.php?action=register",
+  "forgotPassURL": "https://onion.pp.ua/wp-login.php?action=lostpassword",
+  "hastebinServer": "https://hastebin.com",
+  "enableDownloadJava": false,
+  "userDisableDownloadJava": true,
+  "jvmWindows64Dir": "java-windows-x64",
+  "jvmWindows32Dir": "java-windows-x32"
+}
